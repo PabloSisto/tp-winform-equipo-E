@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dominio;
 
-namespace WindowsFormsApp1
+namespace Dominio
 {
-    internal class Imagene
+    public class Imagenes
     {
         private int IdImagen {  get; }
         private string Url { get; set; }

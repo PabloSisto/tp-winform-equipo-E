@@ -1,4 +1,5 @@
-﻿namespace WindowsFormsApp1
+﻿
+namespace WindowsFormsApp1
 {
     partial class FrmAgregarArticulo
     {
@@ -51,6 +52,7 @@
             this.btnCancelarAgregarArticulo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picAgregarImagen)).BeginInit();
             this.SuspendLayout();
+
             // 
             // lblAgregarArticulo
             // 

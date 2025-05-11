@@ -51,7 +51,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(232, 48);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(347, 20);
             this.txtBuscar.TabIndex = 1;
@@ -69,7 +69,7 @@
             // btnAgregarArt
             // 
             this.btnAgregarArt.Location = new System.Drawing.Point(132, 481);
-            this.btnAgregarArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarArt.Name = "btnAgregarArt";
             this.btnAgregarArt.Size = new System.Drawing.Size(87, 35);
             this.btnAgregarArt.TabIndex = 3;
@@ -80,7 +80,7 @@
             // btnModificarArt
             // 
             this.btnModificarArt.Location = new System.Drawing.Point(256, 481);
-            this.btnModificarArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificarArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificarArt.Name = "btnModificarArt";
             this.btnModificarArt.Size = new System.Drawing.Size(87, 35);
             this.btnModificarArt.TabIndex = 4;
@@ -91,7 +91,7 @@
             // btnEliminarArt
             // 
             this.btnEliminarArt.Location = new System.Drawing.Point(384, 481);
-            this.btnEliminarArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarArt.Name = "btnEliminarArt";
             this.btnEliminarArt.Size = new System.Drawing.Size(87, 35);
             this.btnEliminarArt.TabIndex = 5;
@@ -101,7 +101,7 @@
             // btnDetalleArt
             // 
             this.btnDetalleArt.Location = new System.Drawing.Point(524, 481);
-            this.btnDetalleArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDetalleArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnDetalleArt.Name = "btnDetalleArt";
             this.btnDetalleArt.Size = new System.Drawing.Size(87, 35);
             this.btnDetalleArt.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(121, 188);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(500, 264);
             this.listBox1.TabIndex = 7;
@@ -122,7 +122,7 @@
             this.rbCodigo.AutoSize = true;
             this.rbCodigo.Checked = true;
             this.rbCodigo.Location = new System.Drawing.Point(26, 35);
-            this.rbCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.rbCodigo.Name = "rbCodigo";
             this.rbCodigo.Size = new System.Drawing.Size(70, 21);
             this.rbCodigo.TabIndex = 8;
@@ -134,7 +134,7 @@
             // 
             this.rbnombre.AutoSize = true;
             this.rbnombre.Location = new System.Drawing.Point(125, 35);
-            this.rbnombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbnombre.Margin = new System.Windows.Forms.Padding(2);
             this.rbnombre.Name = "rbnombre";
             this.rbnombre.Size = new System.Drawing.Size(76, 21);
             this.rbnombre.TabIndex = 9;
@@ -145,7 +145,7 @@
             // 
             this.rbPrecio.AutoSize = true;
             this.rbPrecio.Location = new System.Drawing.Point(229, 35);
-            this.rbPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.rbPrecio.Name = "rbPrecio";
             this.rbPrecio.Size = new System.Drawing.Size(66, 21);
             this.rbPrecio.TabIndex = 10;
@@ -156,7 +156,7 @@
             // 
             this.rbDescripcion.AutoSize = true;
             this.rbDescripcion.Location = new System.Drawing.Point(326, 35);
-            this.rbDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.rbDescripcion.Name = "rbDescripcion";
             this.rbDescripcion.Size = new System.Drawing.Size(100, 21);
             this.rbDescripcion.TabIndex = 11;
@@ -171,9 +171,9 @@
             this.goxCriterios.Controls.Add(this.rbDescripcion);
             this.goxCriterios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goxCriterios.Location = new System.Drawing.Point(186, 88);
-            this.goxCriterios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.goxCriterios.Margin = new System.Windows.Forms.Padding(2);
             this.goxCriterios.Name = "goxCriterios";
-            this.goxCriterios.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.goxCriterios.Padding = new System.Windows.Forms.Padding(2);
             this.goxCriterios.Size = new System.Drawing.Size(434, 81);
             this.goxCriterios.TabIndex = 12;
             this.goxCriterios.TabStop = false;
@@ -182,7 +182,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(645, 41);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(94, 31);
             this.btnBuscar.TabIndex = 13;
@@ -233,11 +233,12 @@
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(952, 601);
             this.MinimumSize = new System.Drawing.Size(560, 476);
             this.Name = "FrmArticulo";
             this.Text = "App Catalogo";
+            this.Load += new System.EventHandler(this.FrmArticulo_Load);
             this.goxCriterios.ResumeLayout(false);
             this.goxCriterios.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

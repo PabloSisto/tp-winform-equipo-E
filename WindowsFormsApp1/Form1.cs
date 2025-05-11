@@ -40,5 +40,11 @@ namespace WindowsFormsApp1
             FrmModificarArticulo ventanaModificarArticulo = new FrmModificarArticulo();
             ventanaModificarArticulo.ShowDialog();
         }
+
+        private void FrmArticulo_Load(object sender, EventArgs e)
+        {
+            //FrmAgregarArticulo v = new FrmAgregarArticulo();
+            //v.ShowDialog();
+        }
     }
 }

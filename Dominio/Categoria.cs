@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1
+namespace Dominio
 {
-    internal class Categoria
+    public class Categoria
     {
         private int IdCategoria { get; }
         private string Descripcion { get; set; }
