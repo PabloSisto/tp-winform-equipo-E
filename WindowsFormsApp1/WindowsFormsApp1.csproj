@@ -54,6 +54,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmModificarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModificarArticulo.Designer.cs">
+      <DependentUpon>FrmModificarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarArticulo.Designer.cs">
+      <DependentUpon>FrmAgregarArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModificarArticulo.resx">
+      <DependentUpon>FrmModificarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarArticulo.resx">
+      <DependentUpon>FrmAgregarArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>

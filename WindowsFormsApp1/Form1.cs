@@ -28,5 +28,17 @@ namespace WindowsFormsApp1
             FrmMarca ventanaMarca = new FrmMarca();
             ventanaMarca.ShowDialog();
         }
+
+        private void btnAgregarArt_Click(object sender, EventArgs e)
+        {
+            FrmAgregarArticulo ventanaAgregarArticulo = new FrmAgregarArticulo();
+            ventanaAgregarArticulo.ShowDialog();
+        }
+
+        private void btnModificarArt_Click(object sender, EventArgs e)
+        {
+            FrmModificarArticulo ventanaModificarArticulo = new FrmModificarArticulo();
+            ventanaModificarArticulo.ShowDialog();
+        }
     }
 }
