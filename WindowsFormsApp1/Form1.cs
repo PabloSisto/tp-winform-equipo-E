@@ -47,6 +47,8 @@ namespace WindowsFormsApp1
         {
             //FrmAgregarArticulo v = new FrmAgregarArticulo();
             //v.ShowDialog();
+            txtBuscar.Enabled = !rbTodos.Checked;
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -58,13 +60,25 @@ namespace WindowsFormsApp1
 
                 MessageBox.Show($"Se recuperaron {lista.Count} artículos.");
                 dgvArticulo.DataSource = lista;
+                dgvArticulo.RowHeadersVisible = false;
 
                 dgvArticulo.Columns["Descripcion"].Visible = false;
-                dgvArticulo.Columns["marca"].Visible = false;
-                dgvArticulo.Columns["categoria"].Visible = false;
+                dgvArticulo.Columns["IdArticulos"].Visible = false;
+                dgvArticulo.Columns["MarcaDescripcion"].HeaderText = "Marca";
+                dgvArticulo.Columns["CategoriaDescripcion"].HeaderText = "Categoría";
+
+
+
+            } else if(rbnombre.Checked)
+            {
 
             }
 
+        }
+
+        private void rbTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            txtBuscar.Enabled = !rbTodos.Checked;
         }
     }
 }

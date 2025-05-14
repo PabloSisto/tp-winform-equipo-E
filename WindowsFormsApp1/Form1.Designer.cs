@@ -117,6 +117,7 @@
             this.rbCodigo.TabIndex = 8;
             this.rbCodigo.Text = "Codigo";
             this.rbCodigo.UseVisualStyleBackColor = true;
+            this.rbCodigo.CheckedChanged += new System.EventHandler(this.rbTodos_CheckedChanged);
             // 
             // rbnombre
             // 
@@ -128,6 +129,7 @@
             this.rbnombre.TabIndex = 9;
             this.rbnombre.Text = "Nombre";
             this.rbnombre.UseVisualStyleBackColor = true;
+            this.rbnombre.CheckedChanged += new System.EventHandler(this.rbTodos_CheckedChanged);
             // 
             // goxCriterios
             // 
@@ -155,6 +157,7 @@
             this.rbTodos.TabStop = true;
             this.rbTodos.Text = "Todos";
             this.rbTodos.UseVisualStyleBackColor = true;
+            this.rbTodos.CheckedChanged += new System.EventHandler(this.rbTodos_CheckedChanged);
             // 
             // btnBuscar
             // 
@@ -196,12 +199,16 @@
             // 
             // dgvArticulo
             // 
+            this.dgvArticulo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulo.Location = new System.Drawing.Point(176, 243);
+            this.dgvArticulo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvArticulo.Location = new System.Drawing.Point(46, 243);
+            this.dgvArticulo.MultiSelect = false;
             this.dgvArticulo.Name = "dgvArticulo";
             this.dgvArticulo.RowHeadersWidth = 51;
             this.dgvArticulo.RowTemplate.Height = 24;
-            this.dgvArticulo.Size = new System.Drawing.Size(651, 309);
+            this.dgvArticulo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvArticulo.Size = new System.Drawing.Size(824, 309);
             this.dgvArticulo.TabIndex = 14;
             // 
             // FrmArticulo
