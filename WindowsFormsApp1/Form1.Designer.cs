@@ -37,12 +37,12 @@
             this.rbCodigo = new System.Windows.Forms.RadioButton();
             this.rbnombre = new System.Windows.Forms.RadioButton();
             this.goxCriterios = new System.Windows.Forms.GroupBox();
+            this.rbTodos = new System.Windows.Forms.RadioButton();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.msAdmiistrarCategorias = new System.Windows.Forms.ToolStripMenuItem();
             this.administrarMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dgvArticulo = new System.Windows.Forms.DataGridView();
-            this.rbTodos = new System.Windows.Forms.RadioButton();
             this.goxCriterios.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).BeginInit();
@@ -144,6 +144,18 @@
             this.goxCriterios.TabStop = false;
             this.goxCriterios.Text = "Criterios de Busqueda";
             // 
+            // rbTodos
+            // 
+            this.rbTodos.AutoSize = true;
+            this.rbTodos.Checked = true;
+            this.rbTodos.Location = new System.Drawing.Point(32, 43);
+            this.rbTodos.Name = "rbTodos";
+            this.rbTodos.Size = new System.Drawing.Size(76, 24);
+            this.rbTodos.TabIndex = 10;
+            this.rbTodos.TabStop = true;
+            this.rbTodos.Text = "Todos";
+            this.rbTodos.UseVisualStyleBackColor = true;
+            // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(860, 50);
@@ -153,6 +165,7 @@
             this.btnBuscar.TabIndex = 13;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // msAdmiistrarCategorias
             // 
@@ -190,18 +203,6 @@
             this.dgvArticulo.RowTemplate.Height = 24;
             this.dgvArticulo.Size = new System.Drawing.Size(651, 309);
             this.dgvArticulo.TabIndex = 14;
-            // 
-            // rbTodos
-            // 
-            this.rbTodos.AutoSize = true;
-            this.rbTodos.Checked = true;
-            this.rbTodos.Location = new System.Drawing.Point(32, 43);
-            this.rbTodos.Name = "rbTodos";
-            this.rbTodos.Size = new System.Drawing.Size(76, 24);
-            this.rbTodos.TabIndex = 10;
-            this.rbTodos.TabStop = true;
-            this.rbTodos.Text = "Todos";
-            this.rbTodos.UseVisualStyleBackColor = true;
             // 
             // FrmArticulo
             // 

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dominio;
+using Negocio;
 
 namespace WindowsFormsApp1
 {
@@ -45,6 +47,24 @@ namespace WindowsFormsApp1
         {
             //FrmAgregarArticulo v = new FrmAgregarArticulo();
             //v.ShowDialog();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if(rbTodos.Checked)
+            {
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                List<Articulo> lista = negocio.listar();
+
+                MessageBox.Show($"Se recuperaron {lista.Count} artículos.");
+                dgvArticulo.DataSource = lista;
+
+                dgvArticulo.Columns["Descripcion"].Visible = false;
+                dgvArticulo.Columns["marca"].Visible = false;
+                dgvArticulo.Columns["categoria"].Visible = false;
+
+            }
+
         }
     }
 }
