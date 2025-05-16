@@ -9,9 +9,9 @@ namespace Dominio
 {
     public class Imagenes
     {
-        private int IdImagen {  get; }
-        private string Url { get; set; }
-        private Articulo articulo { get; set; }
+        public int IdImagen { get; set; }
+        public string Url { get; set; }
+        public Articulo articulo { get; set; }
         
     }
 }

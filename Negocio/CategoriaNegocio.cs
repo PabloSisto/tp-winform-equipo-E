@@ -7,8 +7,37 @@ using Dominio;
 
 namespace Negocio
 {
-    internal class CategoriaNegocio
+    public class CategoriaNegocio
     {
-        Articulo a = new Articulo();
+        public List<Categoria> listar()
+        {
+            List<Categoria> categorias = new List<Categoria>();
+            AccesoDatos db = new AccesoDatos();
+
+            try
+            {
+                db.setearConsulta("SELECT Id, Descripcion FROM CATEGORIAS;");
+                db.ejecutarLectura();
+
+                while (db.Lector.Read())
+                {
+                    Categoria categoria = new Categoria();
+                    categoria.IdCategoria = (int)db.Lector["Id"];
+                    categoria.Descripcion = (string)db.Lector["Descripcion"];
+
+                    categorias.Add(categoria);
+                }
+
+                return categorias;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                db.cerrarConexion();
+            }
+        }
     }
 }

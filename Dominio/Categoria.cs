@@ -8,7 +8,12 @@ namespace Dominio
 {
     public class Categoria
     {
-        private int IdCategoria { get; }
+        public int IdCategoria { get; set; }
         public string Descripcion { get; set; }
+
+        public override string ToString()
+        {
+            return this.Descripcion;
+        }
     }
 }
