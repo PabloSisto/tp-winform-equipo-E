@@ -56,13 +56,17 @@ namespace WindowsFormsApp1
             ArticuloNegocio negocio = new ArticuloNegocio();
             List<Articulo> listas;   
             
-            if(rbTodos.Checked)
+            if (rbTodos.Checked)
             {
                 listas = negocio.listar();
 
-            } else if(rbnombre.Checked)
+            } else if (rbnombre.Checked)
             {
                 listas = negocio.buscarPorNombre(txtBuscar.Text);
+            }
+            else if (rbCodigo.Checked)
+            {
+                listas = negocio.buscarPorCodigo(txtBuscar.Text);
             }
             else
             {
