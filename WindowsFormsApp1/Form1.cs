@@ -34,14 +34,13 @@ namespace WindowsFormsApp1
 
         private void btnAgregarArt_Click(object sender, EventArgs e)
         {
-            FrmAgregarArticulo ventanaAgregarArticulo = new FrmAgregarArticulo();
+            FrmDatosArticulo ventanaAgregarArticulo = new FrmDatosArticulo();
             ventanaAgregarArticulo.ShowDialog();
         }
 
         private void btnModificarArt_Click(object sender, EventArgs e)
         {
-            FrmModificarArticulo ventanaModificarArticulo = new FrmModificarArticulo();
-            ventanaModificarArticulo.ShowDialog();
+            //TODO
         }
 
         private void FrmArticulo_Load(object sender, EventArgs e)
