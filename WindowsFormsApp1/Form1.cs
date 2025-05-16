@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,40 +46,58 @@ namespace WindowsFormsApp1
 
         private void FrmArticulo_Load(object sender, EventArgs e)
         {
-            //FrmAgregarArticulo v = new FrmAgregarArticulo();
-            //v.ShowDialog();
+            
             txtBuscar.Enabled = !rbTodos.Checked;
 
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            List<Articulo> listas;   
+            
             if(rbTodos.Checked)
             {
-                ArticuloNegocio negocio = new ArticuloNegocio();
-                List<Articulo> lista = negocio.listar();
-
-                MessageBox.Show($"Se recuperaron {lista.Count} artículos.");
-                dgvArticulo.DataSource = lista;
-                dgvArticulo.RowHeadersVisible = false;
-
-                dgvArticulo.Columns["Descripcion"].Visible = false;
-                dgvArticulo.Columns["IdArticulos"].Visible = false;
-                dgvArticulo.Columns["MarcaDescripcion"].HeaderText = "Marca";
-                dgvArticulo.Columns["CategoriaDescripcion"].HeaderText = "Categoría";
-
-
+                listas = negocio.listar();
 
             } else if(rbnombre.Checked)
             {
-
+                listas = negocio.buscarPorNombre(txtBuscar.Text);
             }
+            else
+            {
+                MessageBox.Show("Seleccione algun criterio para buscar.");
+                return;
+            }
+
+            dgvArticulo.DataSource = listas;
+            dgvArticulo.RowHeadersVisible = false;
+            dgvArticulo.Columns["IdArticulos"].Visible = false;   //saco estas columnas del dgv
+            dgvArticulo.Columns["Descripcion"].Visible = false;   
+            dgvArticulo.Columns["MarcaDescripcion"].HeaderText = "Marca"; //renombro las columnas para el dgv
+            dgvArticulo.Columns["CategoriaDescripcion"].HeaderText = "Categoría";
 
         }
 
         private void rbTodos_CheckedChanged(object sender, EventArgs e)
         {
-            txtBuscar.Enabled = !rbTodos.Checked;
+           // txtBuscar.Enabled = !rbTodos.Checked;
+
+            if (rbTodos.Checked)
+            {
+                txtBuscar.Enabled = false;
+                txtBuscar.Text = "";
+            }
+            else if (rbnombre.Checked)
+            {
+                txtBuscar.Enabled = true;
+                dgvArticulo.DataSource = null;
+            }
+            else if (rbCodigo.Checked)
+            {
+                txtBuscar.Enabled= true;
+                dgvArticulo.DataSource = null;
+            }
         }
     }
 }
