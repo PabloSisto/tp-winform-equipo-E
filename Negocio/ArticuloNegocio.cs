@@ -18,7 +18,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta( "SELECT a.Codigo,a.Nombre,a.Descripcion,a.Precio,"
+                datos.setearConsulta( "SELECT a.Id, a.Codigo,a.Nombre,a.Descripcion,a.Precio,"
                     + "m.Descripcion AS MarcaDescripcion,"
                     + "c.Descripcion AS CategoriaDescripcion "
                     + "FROM ARTICULOS a "
@@ -31,6 +31,7 @@ namespace Negocio
                 {
                     var articulo = new Articulo
                     {
+                        IdArticulos = (int)datos.Lector["Id"],
                         Codigo = (string)datos.Lector["Codigo"],
                         Nombre = (string)datos.Lector["Nombre"],
                         Descripcion = (string)datos.Lector["Descripcion"],
@@ -147,5 +148,20 @@ namespace Negocio
             }
         }
 
+        public void eliminar(int id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from ARTICULOS where id = @Id");
+                datos.Comando.Parameters.AddWithValue("@id", id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

@@ -102,5 +102,27 @@ namespace WindowsFormsApp1
                 dgvArticulo.DataSource = null;
             }
         }
+
+        private void btnEliminarArt_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo seleccionado;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Deseas eliminar el artículo seleccionado?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                    negocio.eliminar(seleccionado.IdArticulos);
+                    dgvArticulo.DataSource = dgvArticulo;
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }
