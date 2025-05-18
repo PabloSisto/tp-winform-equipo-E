@@ -39,5 +39,40 @@ namespace Negocio
                 db.cerrarConexion();
             }
         }
+        public void agregar(Categoria nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("insert into CATEGORIAS(Descripcion) values('" + nuevo.Descripcion + "')");
+
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public void eliminar(string descripcion)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from Categorias where descripcion = @descripcion");
+                datos.Comando.Parameters.AddWithValue("@descripcion", descripcion);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }
