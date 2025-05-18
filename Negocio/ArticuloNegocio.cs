@@ -163,5 +163,38 @@ namespace Negocio
                 throw ex;
             }
         }
+
+        public string obtenerDescripcion(string codigo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            String descripcion;
+
+            try
+            {
+                datos.setearConsulta("SELECT Descripcion FROM ARTICULOS WHERE Codigo = @codigo;");
+                datos.Comando.Parameters.Clear();
+                datos.Comando.Parameters.AddWithValue("@codigo", codigo);
+                datos.ejecutarLectura();
+
+                if (datos.Lector.Read())
+                {
+                    // descripcion = (string)datos.Lector["Descripcion"];
+                    //   return descripcion;
+
+                    return datos.Lector["Descripcion"].ToString();
+                }
+                ;
+
+                return "Este articulo no tiene descripcion";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

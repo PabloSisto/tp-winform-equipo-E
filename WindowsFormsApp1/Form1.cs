@@ -124,5 +124,22 @@ namespace WindowsFormsApp1
                 throw ex;
             }
         }
+
+        private void btnDetalleArt_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            if (dgvArticulo.CurrentRow != null)
+            {
+                string codigo = dgvArticulo.CurrentRow.Cells["Codigo"].Value.ToString();
+                string descripcion = negocio.obtenerDescripcion(codigo);
+
+                MessageBox.Show(descripcion, "Descripción del artículo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Seleccioná un artículo primero.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
