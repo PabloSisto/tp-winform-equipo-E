@@ -18,28 +18,23 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta( "SELECT a.Id, a.Codigo,a.Nombre,a.Descripcion,a.Precio,"
-                    + "m.Descripcion AS MarcaDescripcion,"
-                    + "c.Descripcion AS CategoriaDescripcion "
-                    + "FROM ARTICULOS a "
-                    + "INNER JOIN MARCAS m ON m.Id = a.IdMarca "
-                    + "INNER JOIN CATEGORIAS c ON c.Id = a.IdCategoria;");
+                datos.setearConsulta("SELECT a.Id,  a.Codigo, a.Nombre, a.Descripcion, a.Precio,  m.Descripcion   AS MarcaDescripcion, c.Descripcion   AS CategoriaDescripcion, i.ImagenUrl FROM ARTICULOS a INNER JOIN MARCAS m ON m.Id = a.IdMarca INNER JOIN CATEGORIAS  c ON c.Id = a.IdCategoria LEFT  JOIN IMAGENES    i ON i.IdArticulo = a.Id;");
 
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
-                    var articulo = new Articulo
-                    {
-                        IdArticulos = (int)datos.Lector["Id"],
-                        Codigo = (string)datos.Lector["Codigo"],
-                        Nombre = (string)datos.Lector["Nombre"],
-                        Descripcion = (string)datos.Lector["Descripcion"],
-                        precio = Convert.ToDouble(datos.Lector["Precio"]),
-                        MarcaDescripcion = (string)datos.Lector["MarcaDescripcion"],
-                        CategoriaDescripcion = (string)datos.Lector["CategoriaDescripcion"]
-                    };
-                    
+                    Articulo articulo = new Articulo();
+
+                    articulo.IdArticulos = (int)datos.Lector["Id"];
+                    articulo.Codigo = (string)datos.Lector["Codigo"];
+                    articulo.Nombre = (string)datos.Lector["Nombre"];
+                    articulo.Descripcion = (string)datos.Lector["Descripcion"];
+                    articulo.precio = Convert.ToDouble(datos.Lector["Precio"]);
+                    articulo.MarcaDescripcion = (string)datos.Lector["MarcaDescripcion"];
+                    articulo.CategoriaDescripcion = (string)datos.Lector["CategoriaDescripcion"];
+                    articulo.ImagenUrl = (string)datos.Lector["ImagenUrl"];
+
                     listas.Add(articulo);
                 }
 
@@ -61,7 +56,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta(" SELECT a.Codigo, a.Nombre, a.Descripcion, a.Precio, " 
+                datos.setearConsulta(" SELECT a.Codigo, a.Nombre, a.Descripcion, a.Precio, "
                     + " m.Descripcion AS MarcaDescripcion, "
                     + " c.Descripcion AS CategoriaDescripcion "
                     + " FROM ARTICULOS a "
@@ -74,16 +69,16 @@ namespace Negocio
 
                 datos.ejecutarLectura();
 
-                while(datos.Lector.Read())
+                while (datos.Lector.Read())
                 {
                     Articulo articulo = new Articulo()
                     {
-                       Codigo = (string)datos.Lector["Codigo"],
-                       Nombre = (string)datos.Lector["Nombre"],
-                       Descripcion = (string)datos.Lector["Descripcion"],
-                       precio = Convert.ToDouble(datos.Lector["Precio"]),
-                       MarcaDescripcion = (string)datos.Lector["MarcaDescripcion"],
-                       CategoriaDescripcion = (string)datos.Lector["CategoriaDescripcion"]
+                        Codigo = (string)datos.Lector["Codigo"],
+                        Nombre = (string)datos.Lector["Nombre"],
+                        Descripcion = (string)datos.Lector["Descripcion"],
+                        precio = Convert.ToDouble(datos.Lector["Precio"]),
+                        MarcaDescripcion = (string)datos.Lector["MarcaDescripcion"],
+                        CategoriaDescripcion = (string)datos.Lector["CategoriaDescripcion"]
                     };
                     listas.Add(articulo);
                 }
@@ -196,5 +191,6 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+  
     }
 }

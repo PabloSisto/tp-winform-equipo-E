@@ -15,9 +15,11 @@ namespace WindowsFormsApp1
 {
     public partial class FrmArticulo : Form
     {
+        private List<Articulo> listaArticulo;
         public FrmArticulo()
         {
             InitializeComponent();
+            dgvArticulo.SelectionChanged += dgvArticulo_SelectionChanged;
         }
 
         private void msAdmiistrarCategorias_Click(object sender, EventArgs e)
@@ -45,21 +47,23 @@ namespace WindowsFormsApp1
 
         private void FrmArticulo_Load(object sender, EventArgs e)
         {
-            
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             txtBuscar.Enabled = !rbTodos.Checked;
+            listaArticulo = articuloNegocio.listar();
 
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-            List<Articulo> listas;   
-            
+            List<Articulo> listas;
+
             if (rbTodos.Checked)
             {
                 listas = negocio.listar();
 
-            } else if (rbnombre.Checked)
+            }
+            else if (rbnombre.Checked)
             {
                 listas = negocio.buscarPorNombre(txtBuscar.Text);
             }
@@ -76,7 +80,8 @@ namespace WindowsFormsApp1
             dgvArticulo.DataSource = listas;
             dgvArticulo.RowHeadersVisible = false;
             dgvArticulo.Columns["IdArticulos"].Visible = false;   //saco estas columnas del dgv
-            dgvArticulo.Columns["Descripcion"].Visible = false;   
+            dgvArticulo.Columns["Descripcion"].Visible = false;
+            dgvArticulo.Columns["ImagenUrl"].Visible = false;
             dgvArticulo.Columns["MarcaDescripcion"].HeaderText = "Marca"; //renombro las columnas para el dgv
             dgvArticulo.Columns["CategoriaDescripcion"].HeaderText = "Categoría";
 
@@ -84,7 +89,7 @@ namespace WindowsFormsApp1
 
         private void rbTodos_CheckedChanged(object sender, EventArgs e)
         {
-           // txtBuscar.Enabled = !rbTodos.Checked;
+            // txtBuscar.Enabled = !rbTodos.Checked;
 
             if (rbTodos.Checked)
             {
@@ -98,7 +103,7 @@ namespace WindowsFormsApp1
             }
             else if (rbCodigo.Checked)
             {
-                txtBuscar.Enabled= true;
+                txtBuscar.Enabled = true;
                 dgvArticulo.DataSource = null;
             }
         }
@@ -140,6 +145,33 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Seleccioná un artículo primero.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void dgvArticulo_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvArticulo.CurrentRow == null)
+            {
+                pxbArticulo.Image = null;
+                return;
+            }
+            Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+
+            try
+            {
+
+                pxbArticulo.Load(seleccionado.ImagenUrl);
+
+            }
+            catch (Exception ex)
+            {
+
+                pxbArticulo.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+            }
+            finally
+            {
+
+            }
+
         }
     }
 }

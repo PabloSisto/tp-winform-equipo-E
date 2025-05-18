@@ -43,9 +43,11 @@
             this.administrarMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dgvArticulo = new System.Windows.Forms.DataGridView();
+            this.pxbArticulo = new System.Windows.Forms.PictureBox();
             this.goxCriterios.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxbArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuscar
@@ -196,7 +198,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(938, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1225, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -215,12 +217,22 @@
             this.dgvArticulo.Size = new System.Drawing.Size(824, 309);
             this.dgvArticulo.TabIndex = 14;
             // 
+            // pxbArticulo
+            // 
+            this.pxbArticulo.Location = new System.Drawing.Point(955, 287);
+            this.pxbArticulo.Name = "pxbArticulo";
+            this.pxbArticulo.Size = new System.Drawing.Size(230, 203);
+            this.pxbArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pxbArticulo.TabIndex = 15;
+            this.pxbArticulo.TabStop = false;
+            // 
             // FrmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(938, 632);
+            this.ClientSize = new System.Drawing.Size(1225, 632);
+            this.Controls.Add(this.pxbArticulo);
             this.Controls.Add(this.dgvArticulo);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.goxCriterios);
@@ -243,6 +255,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxbArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,6 +277,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.DataGridView dgvArticulo;
         private System.Windows.Forms.RadioButton rbTodos;
+        private System.Windows.Forms.PictureBox pxbArticulo;
     }
 }
 
