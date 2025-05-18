@@ -39,7 +39,9 @@
             // 
             // dgvMarca
             // 
+            this.dgvMarca.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarca.ColumnHeadersVisible = false;
             this.dgvMarca.Location = new System.Drawing.Point(12, 43);
             this.dgvMarca.Name = "dgvMarca";
             this.dgvMarca.Size = new System.Drawing.Size(185, 203);
@@ -105,7 +107,7 @@
             this.MaximumSize = new System.Drawing.Size(423, 392);
             this.MinimumSize = new System.Drawing.Size(423, 392);
             this.Name = "FrmMarca";
-            this.Text = "FrmMarca";
+            this.Text = "Marcas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarca)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

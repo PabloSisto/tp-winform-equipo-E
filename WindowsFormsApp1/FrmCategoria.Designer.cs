@@ -59,7 +59,9 @@
             // 
             // dgvCat
             // 
+            this.dgvCat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCat.ColumnHeadersVisible = false;
             this.dgvCat.Location = new System.Drawing.Point(16, 40);
             this.dgvCat.Name = "dgvCat";
             this.dgvCat.Size = new System.Drawing.Size(185, 203);
@@ -114,11 +116,11 @@
             this.Controls.Add(this.dgvCat);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(423, 392);
             this.MinimumSize = new System.Drawing.Size(423, 392);
             this.Name = "FrmCategoria";
-            this.Text = "FrmCategoria";
+            this.Text = "Categorias";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

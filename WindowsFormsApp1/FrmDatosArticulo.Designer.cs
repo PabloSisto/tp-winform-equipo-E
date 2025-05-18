@@ -143,6 +143,7 @@ namespace WindowsFormsApp1
             // 
             // cmbMarcaArticulo
             // 
+            this.cmbMarcaArticulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMarcaArticulo.FormattingEnabled = true;
             this.cmbMarcaArticulo.Location = new System.Drawing.Point(119, 124);
             this.cmbMarcaArticulo.Name = "cmbMarcaArticulo";
@@ -151,6 +152,7 @@ namespace WindowsFormsApp1
             // 
             // cmbCategoriaArticulo
             // 
+            this.cmbCategoriaArticulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoriaArticulo.FormattingEnabled = true;
             this.cmbCategoriaArticulo.Location = new System.Drawing.Point(119, 156);
             this.cmbCategoriaArticulo.Name = "cmbCategoriaArticulo";

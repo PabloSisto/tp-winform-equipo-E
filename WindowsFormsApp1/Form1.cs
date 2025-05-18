@@ -162,6 +162,7 @@ namespace WindowsFormsApp1
             dgvArticulo.Columns["CategoriaDescripcion"].HeaderText = "Categoría";
             dgvArticulo.Columns["Marca"].Visible = false;
             dgvArticulo.Columns["Categoria"].Visible = false;
+            dgvArticulo.Columns["ImagenUrl"].Visible = false;
         }
 
         private void btnDetalleArt_Click(object sender, EventArgs e)
@@ -172,6 +173,11 @@ namespace WindowsFormsApp1
             {
                 string codigo = dgvArticulo.CurrentRow.Cells["Codigo"].Value.ToString();
                 string descripcion = negocio.obtenerDescripcion(codigo);
+
+                if (string.IsNullOrEmpty(descripcion)) 
+                { 
+                    descripcion = "Articulo sin descripcion"; 
+                }
 
                 MessageBox.Show(descripcion, "Descripción del artículo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

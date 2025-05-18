@@ -41,6 +41,10 @@ namespace WindowsFormsApp1
 
         private void btnAceptarAgregarArticulo_Click(object sender, EventArgs e)
         {
+            if (!ValidarFormulario())
+            {
+                return;
+            }
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             ImagenNegocio imagenNegocio = new ImagenNegocio();
             bool esNuevo = this.articulo == null;
@@ -131,7 +135,7 @@ namespace WindowsFormsApp1
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                throw ex;
             }
             
         }
@@ -236,18 +240,47 @@ namespace WindowsFormsApp1
         {
             if (imagenes.Count <= 1 || indiceActual < 0 || indiceActual >= imagenes.Count)
             {
-                // Si no hay imágenes o solo hay una, desactivo ambos botones
                 btnImagenAnterior.Enabled = false;
                 btnImagenSiguiente.Enabled = false;
             }
             else
             {
-                // Si hay más de una imagen, activo según la posición
                 btnImagenAnterior.Enabled = indiceActual > 0;
                 btnImagenSiguiente.Enabled = indiceActual < imagenes.Count - 1;
             }
         }
 
+        private bool ValidarFormulario()
+        {
+            if (string.IsNullOrWhiteSpace(txtCodigoArticulo.Text))
+            {
+                MessageBox.Show("El código es obligatorio.");
+                txtCodigoArticulo.Focus();
+                return false;
+            }
 
+            if (string.IsNullOrWhiteSpace(txtNombreArticulo.Text))
+            {
+                MessageBox.Show("El nombre es obligatorio.");
+                txtNombreArticulo.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtPrecioArticulo.Text))
+            {
+                MessageBox.Show("El precio es obligatorio.");
+                txtPrecioArticulo.Focus();
+                return false;
+            }
+
+            if (!double.TryParse(txtPrecioArticulo.Text, out _))
+            {
+                MessageBox.Show("El precio debe ser un número válido.");
+                txtPrecioArticulo.Focus();
+                return false;
+            }
+
+            return true;
+        }
     }
 }
