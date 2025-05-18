@@ -43,6 +43,17 @@ namespace WindowsFormsApp1
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtAgregar.Text))
+            {
+                MessageBox.Show("Debes ingresar una categoría antes de continuar.", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+            if (txtAgregar.Text.Equals(""))
+            {
+                ShowDialog();
+            }
             CategoriaNegocio negocio = new CategoriaNegocio();
             Categoria seleccionado;
             DialogResult respuesta = MessageBox.Show("¿Eliminar Categoria?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -57,7 +68,13 @@ namespace WindowsFormsApp1
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             CategoriaNegocio negocio = new CategoriaNegocio();
+            string texto = txtAgregar.Text.Trim();           
 
+            if (string.IsNullOrWhiteSpace(txtAgregar.Text))
+            {
+                MessageBox.Show("Debes ingresar una Categoría antes de continuar.");
+                return;
+            }
             try
             {
                 if (categoria == null)

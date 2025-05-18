@@ -42,6 +42,11 @@ namespace WindowsFormsApp1
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtAgregar.Text))
+            {
+                MessageBox.Show("Debes ingresar una Marca antes de continuar.");
+                return;
+            }
             MarcaNegocio negocio = new MarcaNegocio();
 
             try
@@ -69,6 +74,11 @@ namespace WindowsFormsApp1
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtAgregar.Text))
+            {
+                MessageBox.Show("Debes seleccionar una fila antes de continuar.");
+                return;
+            }
             MarcaNegocio negocio = new MarcaNegocio();
             Marca seleccionado;
             DialogResult respuesta = MessageBox.Show("¿Eliminar Marca?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
