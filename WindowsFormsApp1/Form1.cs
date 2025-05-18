@@ -38,11 +38,26 @@ namespace WindowsFormsApp1
         {
             FrmDatosArticulo ventanaAgregarArticulo = new FrmDatosArticulo();
             ventanaAgregarArticulo.ShowDialog();
+            Cargar();
         }
 
         private void btnModificarArt_Click(object sender, EventArgs e)
         {
-            //TODO
+
+            if (dgvArticulo.CurrentRow == null )
+            {
+                MessageBox.Show("Seleccione un artículo.", "Atención");
+                return;
+            }
+
+            Articulo articuloSeleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+
+ 
+            FrmDatosArticulo ventanaModificarArticulo = new FrmDatosArticulo(articuloSeleccionado, true);
+            ventanaModificarArticulo.ShowDialog();
+            Cargar();
+            
+
         }
 
         private void FrmArticulo_Load(object sender, EventArgs e)
@@ -84,7 +99,8 @@ namespace WindowsFormsApp1
             dgvArticulo.Columns["ImagenUrl"].Visible = false;
             dgvArticulo.Columns["MarcaDescripcion"].HeaderText = "Marca"; //renombro las columnas para el dgv
             dgvArticulo.Columns["CategoriaDescripcion"].HeaderText = "Categoría";
-
+            dgvArticulo.Columns["Marca"].Visible = false;
+            dgvArticulo.Columns["Categoria"].Visible = false;
         }
 
         private void rbTodos_CheckedChanged(object sender, EventArgs e)
@@ -112,22 +128,40 @@ namespace WindowsFormsApp1
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             Articulo seleccionado;
+            ImagenNegocio imagenNegocio = new ImagenNegocio();
             try
             {
                 DialogResult respuesta = MessageBox.Show("¿Deseas eliminar el artículo seleccionado?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (respuesta == DialogResult.Yes)
                 {
                     seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                    imagenNegocio.EliminarImagenesDeArticulo(seleccionado.IdArticulos);
                     negocio.eliminar(seleccionado.IdArticulos);
                     dgvArticulo.DataSource = dgvArticulo;
                 }
-
+                
             }
             catch (Exception ex)
             {
 
                 throw ex;
             }
+            Cargar();
+        }
+
+        private void Cargar()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            List<Articulo> listas = negocio.listar();
+
+            dgvArticulo.DataSource = listas;
+            dgvArticulo.RowHeadersVisible = false;
+            dgvArticulo.Columns["IdArticulos"].Visible = false;   //saco estas columnas del dgv
+            dgvArticulo.Columns["Descripcion"].Visible = false;
+            dgvArticulo.Columns["MarcaDescripcion"].HeaderText = "Marca"; //renombro las columnas para el dgv
+            dgvArticulo.Columns["CategoriaDescripcion"].HeaderText = "Categoría";
+            dgvArticulo.Columns["Marca"].Visible = false;
+            dgvArticulo.Columns["Categoria"].Visible = false;
         }
 
         private void btnDetalleArt_Click(object sender, EventArgs e)
@@ -159,7 +193,7 @@ namespace WindowsFormsApp1
             try
             {
 
-                pxbArticulo.Load(seleccionado.ImagenUrl);
+                pxbArticulo.Load(seleccionado.Imagenes[0].Url);
 
             }
             catch (Exception ex)

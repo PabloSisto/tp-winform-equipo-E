@@ -56,13 +56,19 @@ namespace Negocio
             try
             {
                 conexion.Open();
-                lector = comando.ExecuteReader();
+                comando.ExecuteNonQuery();
 
             }
             catch (Exception ex)
             {
 
                 throw ex;
+ 
+            }
+            finally 
+            {
+                limpiarParametros();
+                conexion.Close();
             }
         }
 
@@ -71,6 +77,37 @@ namespace Negocio
             if(lector != null) 
                 lector.Close();
             conexion.Close();
+        }
+
+        public void setearParametro(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor);
+        }
+
+        public int EjecutarAccionYTraerId()
+        {
+            comando.Connection = conexion;
+            int id;
+
+            try
+            {
+                conexion.Open();
+                id = (int)comando.ExecuteScalar();
+                return id;
+            }
+            catch (Exception ex)
+            { 
+                throw ex;
+            }
+            finally 
+            { 
+                conexion.Close(); 
+            }
+        }
+
+        public void limpiarParametros()
+        {
+            comando.Parameters.Clear();
         }
     }
 }

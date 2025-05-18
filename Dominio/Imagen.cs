@@ -7,11 +7,11 @@ using Dominio;
 
 namespace Dominio
 {
-    public class Imagenes
+    public class Imagen
     {
         public int IdImagen { get; set; }
         public string Url { get; set; }
-        public Articulo articulo { get; set; }
+        public int IdArticulo { get; set; }
         
     }
 }

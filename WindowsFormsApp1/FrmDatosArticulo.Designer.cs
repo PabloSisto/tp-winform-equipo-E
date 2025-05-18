@@ -29,164 +29,164 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblAgregarArticulo = new System.Windows.Forms.Label();
-            this.lblAgregarCodigo = new System.Windows.Forms.Label();
-            this.txtAgregarCodigo = new System.Windows.Forms.TextBox();
-            this.lblAgregarNombre = new System.Windows.Forms.Label();
-            this.lblAgregarMarca = new System.Windows.Forms.Label();
-            this.lblAgregarCategoria = new System.Windows.Forms.Label();
-            this.lblAgregarPrecio = new System.Windows.Forms.Label();
-            this.lblAgregarDescripcion = new System.Windows.Forms.Label();
-            this.lblAgregarImagenes = new System.Windows.Forms.Label();
-            this.txtAgregarNombre = new System.Windows.Forms.TextBox();
-            this.cmbAgregarMarca = new System.Windows.Forms.ComboBox();
-            this.cmbAgregarCategoria = new System.Windows.Forms.ComboBox();
-            this.txtAgregarPrecio = new System.Windows.Forms.TextBox();
-            this.txtAgregarDescripcion = new System.Windows.Forms.TextBox();
-            this.txtAgregarImagen = new System.Windows.Forms.TextBox();
-            this.picAgregarImagen = new System.Windows.Forms.PictureBox();
+            this.lblArticulo = new System.Windows.Forms.Label();
+            this.lblCodigoArticulo = new System.Windows.Forms.Label();
+            this.txtCodigoArticulo = new System.Windows.Forms.TextBox();
+            this.lblNombreArticulo = new System.Windows.Forms.Label();
+            this.lblMarcaArticulo = new System.Windows.Forms.Label();
+            this.lblCategoriaArticulo = new System.Windows.Forms.Label();
+            this.lblPrecioArticulo = new System.Windows.Forms.Label();
+            this.lblDescripcionArticulo = new System.Windows.Forms.Label();
+            this.lblImagenArticulo = new System.Windows.Forms.Label();
+            this.txtNombreArticulo = new System.Windows.Forms.TextBox();
+            this.cmbMarcaArticulo = new System.Windows.Forms.ComboBox();
+            this.cmbCategoriaArticulo = new System.Windows.Forms.ComboBox();
+            this.txtPrecioArticulo = new System.Windows.Forms.TextBox();
+            this.txtDescripcionArticulo = new System.Windows.Forms.TextBox();
+            this.txtUrlImagenArticulo = new System.Windows.Forms.TextBox();
+            this.picImagenArticulo = new System.Windows.Forms.PictureBox();
             this.btnAgregarImagen = new System.Windows.Forms.Button();
             this.btnQuitarImagen = new System.Windows.Forms.Button();
-            this.btnAceptarAgregarArticulo = new System.Windows.Forms.Button();
-            this.btnCancelarAgregarArticulo = new System.Windows.Forms.Button();
+            this.btnAceptarArticulo = new System.Windows.Forms.Button();
+            this.btnCancelarArticulo = new System.Windows.Forms.Button();
             this.btnImagenAnterior = new System.Windows.Forms.Button();
             this.btnImagenSiguiente = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.picAgregarImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImagenArticulo)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblAgregarArticulo
+            // lblArticulo
             // 
-            this.lblAgregarArticulo.AutoSize = true;
-            this.lblAgregarArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgregarArticulo.Location = new System.Drawing.Point(40, 25);
-            this.lblAgregarArticulo.Name = "lblAgregarArticulo";
-            this.lblAgregarArticulo.Size = new System.Drawing.Size(75, 20);
-            this.lblAgregarArticulo.TabIndex = 0;
-            this.lblAgregarArticulo.Text = "Articulo:";
+            this.lblArticulo.AutoSize = true;
+            this.lblArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArticulo.Location = new System.Drawing.Point(40, 25);
+            this.lblArticulo.Name = "lblArticulo";
+            this.lblArticulo.Size = new System.Drawing.Size(75, 20);
+            this.lblArticulo.TabIndex = 0;
+            this.lblArticulo.Text = "Articulo:";
             // 
-            // lblAgregarCodigo
+            // lblCodigoArticulo
             // 
-            this.lblAgregarCodigo.AutoSize = true;
-            this.lblAgregarCodigo.Location = new System.Drawing.Point(47, 62);
-            this.lblAgregarCodigo.Name = "lblAgregarCodigo";
-            this.lblAgregarCodigo.Size = new System.Drawing.Size(43, 13);
-            this.lblAgregarCodigo.TabIndex = 1;
-            this.lblAgregarCodigo.Text = "Codigo:";
+            this.lblCodigoArticulo.AutoSize = true;
+            this.lblCodigoArticulo.Location = new System.Drawing.Point(47, 62);
+            this.lblCodigoArticulo.Name = "lblCodigoArticulo";
+            this.lblCodigoArticulo.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigoArticulo.TabIndex = 1;
+            this.lblCodigoArticulo.Text = "Codigo:";
             // 
-            // txtAgregarCodigo
+            // txtCodigoArticulo
             // 
-            this.txtAgregarCodigo.Location = new System.Drawing.Point(119, 62);
-            this.txtAgregarCodigo.Name = "txtAgregarCodigo";
-            this.txtAgregarCodigo.Size = new System.Drawing.Size(190, 20);
-            this.txtAgregarCodigo.TabIndex = 2;
+            this.txtCodigoArticulo.Location = new System.Drawing.Point(119, 62);
+            this.txtCodigoArticulo.Name = "txtCodigoArticulo";
+            this.txtCodigoArticulo.Size = new System.Drawing.Size(190, 20);
+            this.txtCodigoArticulo.TabIndex = 2;
             // 
-            // lblAgregarNombre
+            // lblNombreArticulo
             // 
-            this.lblAgregarNombre.AutoSize = true;
-            this.lblAgregarNombre.Location = new System.Drawing.Point(47, 93);
-            this.lblAgregarNombre.Name = "lblAgregarNombre";
-            this.lblAgregarNombre.Size = new System.Drawing.Size(47, 13);
-            this.lblAgregarNombre.TabIndex = 3;
-            this.lblAgregarNombre.Text = "Nombre:";
+            this.lblNombreArticulo.AutoSize = true;
+            this.lblNombreArticulo.Location = new System.Drawing.Point(47, 93);
+            this.lblNombreArticulo.Name = "lblNombreArticulo";
+            this.lblNombreArticulo.Size = new System.Drawing.Size(47, 13);
+            this.lblNombreArticulo.TabIndex = 3;
+            this.lblNombreArticulo.Text = "Nombre:";
             // 
-            // lblAgregarMarca
+            // lblMarcaArticulo
             // 
-            this.lblAgregarMarca.AutoSize = true;
-            this.lblAgregarMarca.Location = new System.Drawing.Point(47, 124);
-            this.lblAgregarMarca.Name = "lblAgregarMarca";
-            this.lblAgregarMarca.Size = new System.Drawing.Size(40, 13);
-            this.lblAgregarMarca.TabIndex = 4;
-            this.lblAgregarMarca.Text = "Marca:";
+            this.lblMarcaArticulo.AutoSize = true;
+            this.lblMarcaArticulo.Location = new System.Drawing.Point(47, 124);
+            this.lblMarcaArticulo.Name = "lblMarcaArticulo";
+            this.lblMarcaArticulo.Size = new System.Drawing.Size(40, 13);
+            this.lblMarcaArticulo.TabIndex = 4;
+            this.lblMarcaArticulo.Text = "Marca:";
             // 
-            // lblAgregarCategoria
+            // lblCategoriaArticulo
             // 
-            this.lblAgregarCategoria.AutoSize = true;
-            this.lblAgregarCategoria.Location = new System.Drawing.Point(47, 156);
-            this.lblAgregarCategoria.Name = "lblAgregarCategoria";
-            this.lblAgregarCategoria.Size = new System.Drawing.Size(55, 13);
-            this.lblAgregarCategoria.TabIndex = 5;
-            this.lblAgregarCategoria.Text = "Categoria:";
+            this.lblCategoriaArticulo.AutoSize = true;
+            this.lblCategoriaArticulo.Location = new System.Drawing.Point(47, 156);
+            this.lblCategoriaArticulo.Name = "lblCategoriaArticulo";
+            this.lblCategoriaArticulo.Size = new System.Drawing.Size(55, 13);
+            this.lblCategoriaArticulo.TabIndex = 5;
+            this.lblCategoriaArticulo.Text = "Categoria:";
             // 
-            // lblAgregarPrecio
+            // lblPrecioArticulo
             // 
-            this.lblAgregarPrecio.AutoSize = true;
-            this.lblAgregarPrecio.Location = new System.Drawing.Point(47, 186);
-            this.lblAgregarPrecio.Name = "lblAgregarPrecio";
-            this.lblAgregarPrecio.Size = new System.Drawing.Size(40, 13);
-            this.lblAgregarPrecio.TabIndex = 6;
-            this.lblAgregarPrecio.Text = "Precio:";
+            this.lblPrecioArticulo.AutoSize = true;
+            this.lblPrecioArticulo.Location = new System.Drawing.Point(47, 186);
+            this.lblPrecioArticulo.Name = "lblPrecioArticulo";
+            this.lblPrecioArticulo.Size = new System.Drawing.Size(40, 13);
+            this.lblPrecioArticulo.TabIndex = 6;
+            this.lblPrecioArticulo.Text = "Precio:";
             // 
-            // lblAgregarDescripcion
+            // lblDescripcionArticulo
             // 
-            this.lblAgregarDescripcion.AutoSize = true;
-            this.lblAgregarDescripcion.Location = new System.Drawing.Point(47, 219);
-            this.lblAgregarDescripcion.Name = "lblAgregarDescripcion";
-            this.lblAgregarDescripcion.Size = new System.Drawing.Size(66, 13);
-            this.lblAgregarDescripcion.TabIndex = 7;
-            this.lblAgregarDescripcion.Text = "Descripcion:";
+            this.lblDescripcionArticulo.AutoSize = true;
+            this.lblDescripcionArticulo.Location = new System.Drawing.Point(47, 219);
+            this.lblDescripcionArticulo.Name = "lblDescripcionArticulo";
+            this.lblDescripcionArticulo.Size = new System.Drawing.Size(66, 13);
+            this.lblDescripcionArticulo.TabIndex = 7;
+            this.lblDescripcionArticulo.Text = "Descripcion:";
             // 
-            // lblAgregarImagenes
+            // lblImagenArticulo
             // 
-            this.lblAgregarImagenes.AutoSize = true;
-            this.lblAgregarImagenes.Location = new System.Drawing.Point(47, 290);
-            this.lblAgregarImagenes.Name = "lblAgregarImagenes";
-            this.lblAgregarImagenes.Size = new System.Drawing.Size(53, 13);
-            this.lblAgregarImagenes.TabIndex = 8;
-            this.lblAgregarImagenes.Text = "Imagenes";
+            this.lblImagenArticulo.AutoSize = true;
+            this.lblImagenArticulo.Location = new System.Drawing.Point(47, 290);
+            this.lblImagenArticulo.Name = "lblImagenArticulo";
+            this.lblImagenArticulo.Size = new System.Drawing.Size(58, 13);
+            this.lblImagenArticulo.TabIndex = 8;
+            this.lblImagenArticulo.Text = "Url Imagen";
             // 
-            // txtAgregarNombre
+            // txtNombreArticulo
             // 
-            this.txtAgregarNombre.Location = new System.Drawing.Point(119, 93);
-            this.txtAgregarNombre.Name = "txtAgregarNombre";
-            this.txtAgregarNombre.Size = new System.Drawing.Size(190, 20);
-            this.txtAgregarNombre.TabIndex = 9;
+            this.txtNombreArticulo.Location = new System.Drawing.Point(119, 93);
+            this.txtNombreArticulo.Name = "txtNombreArticulo";
+            this.txtNombreArticulo.Size = new System.Drawing.Size(190, 20);
+            this.txtNombreArticulo.TabIndex = 9;
             // 
-            // cmbAgregarMarca
+            // cmbMarcaArticulo
             // 
-            this.cmbAgregarMarca.FormattingEnabled = true;
-            this.cmbAgregarMarca.Location = new System.Drawing.Point(119, 124);
-            this.cmbAgregarMarca.Name = "cmbAgregarMarca";
-            this.cmbAgregarMarca.Size = new System.Drawing.Size(190, 21);
-            this.cmbAgregarMarca.TabIndex = 10;
+            this.cmbMarcaArticulo.FormattingEnabled = true;
+            this.cmbMarcaArticulo.Location = new System.Drawing.Point(119, 124);
+            this.cmbMarcaArticulo.Name = "cmbMarcaArticulo";
+            this.cmbMarcaArticulo.Size = new System.Drawing.Size(190, 21);
+            this.cmbMarcaArticulo.TabIndex = 10;
             // 
-            // cmbAgregarCategoria
+            // cmbCategoriaArticulo
             // 
-            this.cmbAgregarCategoria.FormattingEnabled = true;
-            this.cmbAgregarCategoria.Location = new System.Drawing.Point(119, 156);
-            this.cmbAgregarCategoria.Name = "cmbAgregarCategoria";
-            this.cmbAgregarCategoria.Size = new System.Drawing.Size(190, 21);
-            this.cmbAgregarCategoria.TabIndex = 11;
+            this.cmbCategoriaArticulo.FormattingEnabled = true;
+            this.cmbCategoriaArticulo.Location = new System.Drawing.Point(119, 156);
+            this.cmbCategoriaArticulo.Name = "cmbCategoriaArticulo";
+            this.cmbCategoriaArticulo.Size = new System.Drawing.Size(190, 21);
+            this.cmbCategoriaArticulo.TabIndex = 11;
             // 
-            // txtAgregarPrecio
+            // txtPrecioArticulo
             // 
-            this.txtAgregarPrecio.Location = new System.Drawing.Point(119, 186);
-            this.txtAgregarPrecio.Name = "txtAgregarPrecio";
-            this.txtAgregarPrecio.Size = new System.Drawing.Size(190, 20);
-            this.txtAgregarPrecio.TabIndex = 12;
+            this.txtPrecioArticulo.Location = new System.Drawing.Point(119, 186);
+            this.txtPrecioArticulo.Name = "txtPrecioArticulo";
+            this.txtPrecioArticulo.Size = new System.Drawing.Size(190, 20);
+            this.txtPrecioArticulo.TabIndex = 12;
             // 
-            // txtAgregarDescripcion
+            // txtDescripcionArticulo
             // 
-            this.txtAgregarDescripcion.Location = new System.Drawing.Point(119, 219);
-            this.txtAgregarDescripcion.Multiline = true;
-            this.txtAgregarDescripcion.Name = "txtAgregarDescripcion";
-            this.txtAgregarDescripcion.Size = new System.Drawing.Size(190, 61);
-            this.txtAgregarDescripcion.TabIndex = 13;
+            this.txtDescripcionArticulo.Location = new System.Drawing.Point(119, 219);
+            this.txtDescripcionArticulo.Multiline = true;
+            this.txtDescripcionArticulo.Name = "txtDescripcionArticulo";
+            this.txtDescripcionArticulo.Size = new System.Drawing.Size(190, 61);
+            this.txtDescripcionArticulo.TabIndex = 13;
             // 
-            // txtAgregarImagen
+            // txtUrlImagenArticulo
             // 
-            this.txtAgregarImagen.Location = new System.Drawing.Point(119, 290);
-            this.txtAgregarImagen.Name = "txtAgregarImagen";
-            this.txtAgregarImagen.Size = new System.Drawing.Size(190, 20);
-            this.txtAgregarImagen.TabIndex = 14;
+            this.txtUrlImagenArticulo.Location = new System.Drawing.Point(119, 290);
+            this.txtUrlImagenArticulo.Name = "txtUrlImagenArticulo";
+            this.txtUrlImagenArticulo.Size = new System.Drawing.Size(190, 20);
+            this.txtUrlImagenArticulo.TabIndex = 14;
             // 
-            // picAgregarImagen
+            // picImagenArticulo
             // 
-            this.picAgregarImagen.Location = new System.Drawing.Point(119, 348);
-            this.picAgregarImagen.Name = "picAgregarImagen";
-            this.picAgregarImagen.Size = new System.Drawing.Size(190, 190);
-            this.picAgregarImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAgregarImagen.TabIndex = 16;
-            this.picAgregarImagen.TabStop = false;
+            this.picImagenArticulo.Location = new System.Drawing.Point(119, 348);
+            this.picImagenArticulo.Name = "picImagenArticulo";
+            this.picImagenArticulo.Size = new System.Drawing.Size(190, 190);
+            this.picImagenArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImagenArticulo.TabIndex = 16;
+            this.picImagenArticulo.TabStop = false;
             // 
             // btnAgregarImagen
             // 
@@ -196,6 +196,7 @@ namespace WindowsFormsApp1
             this.btnAgregarImagen.TabIndex = 17;
             this.btnAgregarImagen.Text = "Agregar";
             this.btnAgregarImagen.UseVisualStyleBackColor = true;
+            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
             // 
             // btnQuitarImagen
             // 
@@ -205,26 +206,27 @@ namespace WindowsFormsApp1
             this.btnQuitarImagen.TabIndex = 18;
             this.btnQuitarImagen.Text = "Quitar";
             this.btnQuitarImagen.UseVisualStyleBackColor = true;
+            this.btnQuitarImagen.Click += new System.EventHandler(this.btnQuitarImagen_Click);
             // 
-            // btnAceptarAgregarArticulo
+            // btnAceptarArticulo
             // 
-            this.btnAceptarAgregarArticulo.Location = new System.Drawing.Point(153, 556);
-            this.btnAceptarAgregarArticulo.Name = "btnAceptarAgregarArticulo";
-            this.btnAceptarAgregarArticulo.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptarAgregarArticulo.TabIndex = 19;
-            this.btnAceptarAgregarArticulo.Text = "Aceptar";
-            this.btnAceptarAgregarArticulo.UseVisualStyleBackColor = true;
-            this.btnAceptarAgregarArticulo.Click += new System.EventHandler(this.btnAceptarAgregarArticulo_Click);
+            this.btnAceptarArticulo.Location = new System.Drawing.Point(153, 556);
+            this.btnAceptarArticulo.Name = "btnAceptarArticulo";
+            this.btnAceptarArticulo.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptarArticulo.TabIndex = 19;
+            this.btnAceptarArticulo.Text = "Aceptar";
+            this.btnAceptarArticulo.UseVisualStyleBackColor = true;
+            this.btnAceptarArticulo.Click += new System.EventHandler(this.btnAceptarAgregarArticulo_Click);
             // 
-            // btnCancelarAgregarArticulo
+            // btnCancelarArticulo
             // 
-            this.btnCancelarAgregarArticulo.Location = new System.Drawing.Point(234, 556);
-            this.btnCancelarAgregarArticulo.Name = "btnCancelarAgregarArticulo";
-            this.btnCancelarAgregarArticulo.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarAgregarArticulo.TabIndex = 20;
-            this.btnCancelarAgregarArticulo.Text = "Cancelar";
-            this.btnCancelarAgregarArticulo.UseVisualStyleBackColor = true;
-            this.btnCancelarAgregarArticulo.Click += new System.EventHandler(this.btnCancelarAgregarArticulo_Click);
+            this.btnCancelarArticulo.Location = new System.Drawing.Point(234, 556);
+            this.btnCancelarArticulo.Name = "btnCancelarArticulo";
+            this.btnCancelarArticulo.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelarArticulo.TabIndex = 20;
+            this.btnCancelarArticulo.Text = "Cancelar";
+            this.btnCancelarArticulo.UseVisualStyleBackColor = true;
+            this.btnCancelarArticulo.Click += new System.EventHandler(this.btnCancelarAgregarArticulo_Click);
             // 
             // btnImagenAnterior
             // 
@@ -237,6 +239,7 @@ namespace WindowsFormsApp1
             this.btnImagenAnterior.TabIndex = 21;
             this.btnImagenAnterior.Text = "<";
             this.btnImagenAnterior.UseVisualStyleBackColor = false;
+            this.btnImagenAnterior.Click += new System.EventHandler(this.btnImagenAnterior_Click);
             // 
             // btnImagenSiguiente
             // 
@@ -249,39 +252,40 @@ namespace WindowsFormsApp1
             this.btnImagenSiguiente.TabIndex = 22;
             this.btnImagenSiguiente.Text = ">";
             this.btnImagenSiguiente.UseVisualStyleBackColor = false;
+            this.btnImagenSiguiente.Click += new System.EventHandler(this.btnImagenSiguiente_Click);
             // 
-            // FrmAgregarArticulo
+            // FrmDatosArticulo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(387, 592);
             this.Controls.Add(this.btnImagenSiguiente);
             this.Controls.Add(this.btnImagenAnterior);
-            this.Controls.Add(this.btnCancelarAgregarArticulo);
-            this.Controls.Add(this.btnAceptarAgregarArticulo);
+            this.Controls.Add(this.btnCancelarArticulo);
+            this.Controls.Add(this.btnAceptarArticulo);
             this.Controls.Add(this.btnQuitarImagen);
             this.Controls.Add(this.btnAgregarImagen);
-            this.Controls.Add(this.picAgregarImagen);
-            this.Controls.Add(this.txtAgregarImagen);
-            this.Controls.Add(this.txtAgregarDescripcion);
-            this.Controls.Add(this.txtAgregarPrecio);
-            this.Controls.Add(this.cmbAgregarCategoria);
-            this.Controls.Add(this.cmbAgregarMarca);
-            this.Controls.Add(this.txtAgregarNombre);
-            this.Controls.Add(this.lblAgregarImagenes);
-            this.Controls.Add(this.lblAgregarDescripcion);
-            this.Controls.Add(this.lblAgregarPrecio);
-            this.Controls.Add(this.lblAgregarCategoria);
-            this.Controls.Add(this.lblAgregarMarca);
-            this.Controls.Add(this.lblAgregarNombre);
-            this.Controls.Add(this.txtAgregarCodigo);
-            this.Controls.Add(this.lblAgregarCodigo);
-            this.Controls.Add(this.lblAgregarArticulo);
-            this.Name = "FrmAgregarArticulo";
+            this.Controls.Add(this.picImagenArticulo);
+            this.Controls.Add(this.txtUrlImagenArticulo);
+            this.Controls.Add(this.txtDescripcionArticulo);
+            this.Controls.Add(this.txtPrecioArticulo);
+            this.Controls.Add(this.cmbCategoriaArticulo);
+            this.Controls.Add(this.cmbMarcaArticulo);
+            this.Controls.Add(this.txtNombreArticulo);
+            this.Controls.Add(this.lblImagenArticulo);
+            this.Controls.Add(this.lblDescripcionArticulo);
+            this.Controls.Add(this.lblPrecioArticulo);
+            this.Controls.Add(this.lblCategoriaArticulo);
+            this.Controls.Add(this.lblMarcaArticulo);
+            this.Controls.Add(this.lblNombreArticulo);
+            this.Controls.Add(this.txtCodigoArticulo);
+            this.Controls.Add(this.lblCodigoArticulo);
+            this.Controls.Add(this.lblArticulo);
+            this.Name = "FrmDatosArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Articulo";
             this.Load += new System.EventHandler(this.FrmAgregarArticulo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picAgregarImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImagenArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,26 +293,26 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        private System.Windows.Forms.Label lblAgregarArticulo;
-        private System.Windows.Forms.Label lblAgregarCodigo;
-        private System.Windows.Forms.TextBox txtAgregarCodigo;
-        private System.Windows.Forms.Label lblAgregarNombre;
-        private System.Windows.Forms.Label lblAgregarMarca;
-        private System.Windows.Forms.Label lblAgregarCategoria;
-        private System.Windows.Forms.Label lblAgregarPrecio;
-        private System.Windows.Forms.Label lblAgregarDescripcion;
-        private System.Windows.Forms.Label lblAgregarImagenes;
-        private System.Windows.Forms.TextBox txtAgregarNombre;
-        private System.Windows.Forms.ComboBox cmbAgregarMarca;
-        private System.Windows.Forms.ComboBox cmbAgregarCategoria;
-        private System.Windows.Forms.TextBox txtAgregarPrecio;
-        private System.Windows.Forms.TextBox txtAgregarDescripcion;
-        private System.Windows.Forms.TextBox txtAgregarImagen;
-        private System.Windows.Forms.PictureBox picAgregarImagen;
+        private System.Windows.Forms.Label lblArticulo;
+        private System.Windows.Forms.Label lblCodigoArticulo;
+        private System.Windows.Forms.TextBox txtCodigoArticulo;
+        private System.Windows.Forms.Label lblNombreArticulo;
+        private System.Windows.Forms.Label lblMarcaArticulo;
+        private System.Windows.Forms.Label lblCategoriaArticulo;
+        private System.Windows.Forms.Label lblPrecioArticulo;
+        private System.Windows.Forms.Label lblDescripcionArticulo;
+        private System.Windows.Forms.Label lblImagenArticulo;
+        private System.Windows.Forms.TextBox txtNombreArticulo;
+        private System.Windows.Forms.ComboBox cmbMarcaArticulo;
+        private System.Windows.Forms.ComboBox cmbCategoriaArticulo;
+        private System.Windows.Forms.TextBox txtPrecioArticulo;
+        private System.Windows.Forms.TextBox txtDescripcionArticulo;
+        private System.Windows.Forms.TextBox txtUrlImagenArticulo;
+        private System.Windows.Forms.PictureBox picImagenArticulo;
         private System.Windows.Forms.Button btnAgregarImagen;
         private System.Windows.Forms.Button btnQuitarImagen;
-        private System.Windows.Forms.Button btnAceptarAgregarArticulo;
-        private System.Windows.Forms.Button btnCancelarAgregarArticulo;
+        private System.Windows.Forms.Button btnAceptarArticulo;
+        private System.Windows.Forms.Button btnCancelarArticulo;
         private System.Windows.Forms.Button btnImagenAnterior;
         private System.Windows.Forms.Button btnImagenSiguiente;
     }
