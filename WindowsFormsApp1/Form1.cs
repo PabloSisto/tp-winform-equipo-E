@@ -126,19 +126,29 @@ namespace WindowsFormsApp1
 
         private void btnEliminarArt_Click(object sender, EventArgs e)
         {
+
             ArticuloNegocio negocio = new ArticuloNegocio();
             Articulo seleccionado;
             ImagenNegocio imagenNegocio = new ImagenNegocio();
             try
             {
-                DialogResult respuesta = MessageBox.Show("¿Deseas eliminar el artículo seleccionado?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (respuesta == DialogResult.Yes)
+                   if(dgvArticulo.SelectedRows.Count > 0)
                 {
-                    seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
-                    imagenNegocio.EliminarImagenesDeArticulo(seleccionado.IdArticulos);
-                    negocio.eliminar(seleccionado.IdArticulos);
-                    dgvArticulo.DataSource = dgvArticulo;
+                    DialogResult respuesta = MessageBox.Show("¿Deseas eliminar el artículo seleccionado?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                        imagenNegocio.EliminarImagenesDeArticulo(seleccionado.IdArticulos);
+                        negocio.eliminar(seleccionado.IdArticulos);
+                        dgvArticulo.DataSource = dgvArticulo;
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("Seleccione un articulo para eliminar");
+
+                }
+              
                 
             }
             catch (Exception ex)
